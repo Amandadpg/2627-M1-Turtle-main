@@ -15,7 +15,7 @@ START_X = -320
 FINISH_X = 300
 
 RED_SPEED = 30
-BLUE_SPEED = 20
+BLUE_SPEED = 35
 
 
 def prepare_game():
