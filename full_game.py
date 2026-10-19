@@ -14,6 +14,7 @@ SCREEN_HEIGHT = 500
 START_X = -320
 FINISH_X = 300
 
+#Ajustamos las velocidades de las tortugas
 RED_SPEED = 30
 BLUE_SPEED = 35
 
@@ -46,6 +47,7 @@ def prepare_game():
 
 def run_race(red, blue):
     """Mueve las tortugas hasta que una alcance la meta."""
+    #Comprobamos que las velocodades sean mayores que 0
     if(RED_SPEED <= 0 or BLUE_SPEED <= 0):
         print("Ambas velocidades deben ser positivas.")
         return ""
@@ -54,6 +56,7 @@ def run_race(red, blue):
         red.forward(RED_SPEED)
         blue.forward(BLUE_SPEED)
 
+    #Comprobamos si hay empate o si una de las tortugas ha ganado
     if red.xcor() >= FINISH_X and blue.xcor() >= FINISH_X:
         return "empate"
     elif red.xcor() >= FINISH_X:
